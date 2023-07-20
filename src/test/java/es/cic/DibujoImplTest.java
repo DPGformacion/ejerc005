@@ -42,9 +42,10 @@ public class DibujoImplTest {
 		assertEquals(998, listado.get(0).ycord, 0.000001);
 		
 		f = new Linea(999, 40, 40, "negro", 100, 80, 80, 80);
-		listado = dibujo.moverFigura(listado, f, 999, 997);
-		assertEquals(999, listado.get(1).xcord, 0.000001);
-		assertEquals(998, listado.get(1).ycord, 0.000001);
+		listado = dibujo.moverFigura(listado, f, 999, 998);
+		f = (Linea) listado.get(1);
+		assertEquals(999, ((Linea) f).xpunto, 0.000001);
+		assertEquals(998, ((Linea) f).ypunto, 0.000001);
 	}
 
 }
