@@ -10,7 +10,7 @@ public interface Dibujo {
 	
 	public List<Figura> moverFigura(List<Figura> listado, Figura figura, int newX, int newY);
 	
-	public void transformarFigura(List<Figura> listado, Figura figura);
+	public List<Figura> transformarFigura(List<Figura> listado, Figura figura, Integer newSize, Integer newX, Integer newY);
 	
-	public void comprobarTamaño(List<Figura> listado, Figura figura);
+	public boolean comprobarTamaño(Figura figura);
 }

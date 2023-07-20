@@ -2,14 +2,14 @@ package es.cic;
 
 public class Lienzo {
 
-	private final static int x = 1000000;
-	private final static int y = 1000000;
+	private final int x = 1000000;
+	private final int y = 1000000;
 	
-	public static int getX() {
+	public int getX() {
 		return x;
 	}
 	
-	public static int getY() {
+	public int getY() {
 		return y;
 	}
 		
