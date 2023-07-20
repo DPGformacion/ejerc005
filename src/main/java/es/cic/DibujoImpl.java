@@ -8,7 +8,7 @@ public class DibujoImpl implements Dibujo {
 	List<Figura> listado = new ArrayList<Figura>();
 
 	@Override
-	public String crearFigura(List<Figura> listado, Figura figura) {
+	public String crear(List<Figura> listado, Figura figura) {
 
 		String creacion = "";
 		listado.add(figura);
@@ -32,14 +32,14 @@ public class DibujoImpl implements Dibujo {
 	}
 
 	@Override
-	public boolean eliminarFigura(List<Figura> listado, Figura figura) {
+	public boolean eliminar(List<Figura> listado, Figura figura) {
 
 		boolean eliminado = listado.remove(figura);
 		return eliminado;
 	}
 
 	@Override
-	public List<Figura> moverFigura(List<Figura> listado, Figura figura, int newX, int newY) {
+	public List<Figura> mover(List<Figura> listado, Figura figura, int newX, int newY) {
 
 		listado.remove(figura);
 
@@ -60,7 +60,7 @@ public class DibujoImpl implements Dibujo {
 	}
 
 	@Override
-	public List<Figura> transformarFigura(List<Figura> listado, Figura figura, Integer newSize, Integer newX, Integer newY) {
+	public List<Figura> transformar(List<Figura> listado, Figura figura, Integer newSize, Integer newX, Integer newY) {
 
 		listado.remove(figura);
 		

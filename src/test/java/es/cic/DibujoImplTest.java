@@ -13,36 +13,36 @@ public class DibujoImplTest {
 	List<Figura> listado = new ArrayList<Figura>();
 	
 	@Test
-	public void testCrearFigura() {
+	public void testCrear() {
 		Figura f = new Circulo(999, 40, 40, "negro", 100);
-		assertEquals("circulo", dibujo.crearFigura(listado, f));
+		assertEquals("circulo", dibujo.crear(listado, f));
 		
 		f = new Cuadrado(999, 40, 40, "negro", 100);
-		assertEquals("cuadrado", dibujo.crearFigura(listado, f));
+		assertEquals("cuadrado", dibujo.crear(listado, f));
 		
 		f = new Linea(999, 40, 40, "negro", 100, 80, 80, 80);
-		assertEquals("linea", dibujo.crearFigura(listado, f));
+		assertEquals("linea", dibujo.crear(listado, f));
 		
 		f = new Figura(999, 40, 40, "negro");
-		assertEquals("punto", dibujo.crearFigura(listado, f));
+		assertEquals("punto", dibujo.crear(listado, f));
 	}
 	
 	@Test
-	public void testEliminarFigura() {
+	public void testEliminar() {
 		Figura f = new Circulo(999, 40, 40, "negro", 100);
 		listado.add(f);
-		assertTrue(dibujo.eliminarFigura(listado, f));
+		assertTrue(dibujo.eliminar(listado, f));
 	}
 	
 	@Test
-	public void testMoverFigura() {
+	public void testMover() {
 		Figura f = new Circulo(999, 40, 40, "negro", 100);
-		listado = dibujo.moverFigura(listado, f, 999, 998);
+		listado = dibujo.mover(listado, f, 999, 998);
 		assertEquals(999, listado.get(0).xcord, 0.000001);
 		assertEquals(998, listado.get(0).ycord, 0.000001);
 		
 		f = new Linea(999, 40, 40, "negro", 100, 80, 80, 80);
-		listado = dibujo.moverFigura(listado, f, 999, 998);
+		listado = dibujo.mover(listado, f, 999, 998);
 		assertEquals(999, listado.get(0).xcord, 0.000001);
 		assertEquals(998, listado.get(0).ycord, 0.000001);
 		assertEquals(1079, ((Linea) listado.get(1)).xpunto, 0.000001);
@@ -50,17 +50,17 @@ public class DibujoImplTest {
 	}
 	
 	@Test
-	public void testTransformarFigura() {	
+	public void testTransformar() {	
 		Figura f = new Circulo(999, 40, 40, "negro", 100);
-		listado = dibujo.transformarFigura(listado, f, 199, null, null);
+		listado = dibujo.transformar(listado, f, 199, null, null);
 		assertEquals(199, ((Circulo) listado.get(0)).radio, 0.000001);
 		
 		f = new Cuadrado(999, 40, 40, "negro", 100);
-		listado = dibujo.transformarFigura(listado, f, 199, null, null);
+		listado = dibujo.transformar(listado, f, 199, null, null);
 		assertEquals(199, ((Cuadrado) listado.get(1)).lado, 0.000001);
 		
 		f = new Linea(999, 40, 40, "negro", 100, 80, 80, 80);
-		listado = dibujo.transformarFigura(listado, f, null, 999, 998);
+		listado = dibujo.transformar(listado, f, null, 999, 998);
 		assertEquals(999, listado.get(2).xcord, 0.000001);
 		assertEquals(998, listado.get(2).ycord, 0.000001);
 	}
