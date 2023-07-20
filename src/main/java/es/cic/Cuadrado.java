@@ -1,14 +1,13 @@
 package es.cic;
 
-public class Cuadrado extends Figuras {
+public class Cuadrado extends Figura {
 
 	public int lado;
 	public int angulo;
 
-	public Cuadrado(int centro, int xcord, int ycord, String color, int lado, int angulo) {
-		super(centro, xcord, ycord, color);
+	public Cuadrado(int id, int xcord, int ycord, String color, int lado) {
+		super(id, xcord, ycord, color);
 		this.lado = lado;
-		this.angulo = angulo;
 	}
 
 	public int getLado() {
@@ -17,14 +16,6 @@ public class Cuadrado extends Figuras {
 
 	public void setLado(int lado) {
 		this.lado = lado;
-	}
-
-	public int getAngulo() {
-		return angulo;
-	}
-
-	public void setAngulo(int angulo) {
-		this.angulo = angulo;
 	}
 	
 }

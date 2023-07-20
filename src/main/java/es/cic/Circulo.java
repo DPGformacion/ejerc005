@@ -1,11 +1,11 @@
 package es.cic;
 
-public class Circulo extends Figuras{
+public class Circulo extends Figura{
 
 	public int radio;
 
-	public Circulo(int centro, int xcord, int ycord, String color, int radio) {
-		super(centro, xcord, ycord, color);
+	public Circulo(int id, int xcord, int ycord, String color, int radio) {
+		super(id, xcord, ycord, color);
 		this.radio = radio;
 	}
 

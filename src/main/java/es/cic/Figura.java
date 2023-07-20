@@ -1,26 +1,26 @@
 package es.cic;
 
-public class Figuras {
+public class Figura {
 
-	public int centro;
+	public int id;
 	public int xcord;
 	public int ycord;
 	public String color;
 	
-	public Figuras(int centro, int xcord, int ycord, String color) {
+	public Figura(int id, int xcord, int ycord, String color) {
 		super();
-		this.centro = centro;
+		this.id = id;
 		this.xcord = xcord;
 		this.ycord = ycord;
 		this.color = color;
 	}
 
-	public int getPoint() {
-		return centro;
+	public int getId() {
+		return id;
 	}
 
-	public void setPoint(int centro) {
-		this.centro = centro;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public int getXcord() {
@@ -46,6 +46,5 @@ public class Figuras {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	
 	
 }

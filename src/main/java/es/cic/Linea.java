@@ -1,26 +1,16 @@
 package es.cic;
 
-public class Linea extends Figuras {
+public class Linea extends Figura {
 
-	public int punto;
 	public int xpunto;
 	public int ypunto;
 	public int angulo;
 
-	public Linea(int centro, int xcord, int ycord, String color, int punto, int xpunto, int ypunto, int angulo) {
-		super(centro, xcord, ycord, color);
-		this.punto = punto;
+	public Linea(int id, int xcord, int ycord, String color, int punto, int xpunto, int ypunto, int angulo) {
+		super(id, xcord, ycord, color);
 		this.xpunto = xpunto;
 		this.ypunto = ypunto;
 		this.angulo = angulo;
-	}
-
-	public int getPunto() {
-		return punto;
-	}
-
-	public void setPunto(int punto) {
-		this.punto = punto;
 	}
 
 	public int getXpunto() {
