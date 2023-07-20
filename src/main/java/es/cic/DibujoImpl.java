@@ -83,7 +83,7 @@ public class DibujoImpl implements Dibujo {
 	public boolean comprobarTamaño(Figura figura){
 		
 		Lienzo l = new Lienzo();
-		if (figura.xcord > l.getX() || figura.ycord > l.getY()) {
+		if (figura.getXcord() > l.getX() || figura.getYcord() > l.getY()) {
 			return false;
 		}
 		

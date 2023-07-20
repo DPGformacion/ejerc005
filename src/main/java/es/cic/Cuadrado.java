@@ -2,8 +2,8 @@ package es.cic;
 
 public class Cuadrado extends Figura {
 
-	public int lado;
-	public int angulo;
+	private int lado;
+	private int angulo;
 
 	public Cuadrado(int id, int xcord, int ycord, String color, int lado) {
 		super(id, xcord, ycord, color);

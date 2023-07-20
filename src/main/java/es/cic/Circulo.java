@@ -2,7 +2,7 @@ package es.cic;
 
 public class Circulo extends Figura{
 
-	public int radio;
+	private int radio;
 
 	public Circulo(int id, int xcord, int ycord, String color, int radio) {
 		super(id, xcord, ycord, color);

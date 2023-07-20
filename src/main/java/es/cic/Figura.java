@@ -2,10 +2,10 @@ package es.cic;
 
 public class Figura {
 
-	public int id;
-	public int xcord;
-	public int ycord;
-	public String color;
+	private int id;
+	private int xcord;
+	private int ycord;
+	private String color;
 	
 	public Figura(int id, int xcord, int ycord, String color) {
 		super();
